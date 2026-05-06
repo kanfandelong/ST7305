@@ -45,7 +45,7 @@ void loop() {
 }
 ```
 
-## 典型接线
+## 参考接线
 | LCD 引脚 | ESP32 GPIO |
 |----------|------------|
 | SCLK     | 18         |
@@ -89,9 +89,6 @@ ST7305 display(SCREEN_WIDTH, SCREEN_HEIGHT, &SPI, TFT_CS, TFT_DC, TFT_RST, TFT_T
 void setup() {
     Serial.begin(115200);
     Serial.println("ST7305 Test");
-
-    // Initialize SPI
-    SPI.begin();
     
     // Initialize display
     if (!display.begin()) {
@@ -132,4 +129,3 @@ void loop() {
 
 ```
 
-![st7305](st7305.jpg)
